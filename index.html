@@ -4,16 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-Aisyah</title>
+    <title>Todo - Aisyah</title>
 
     <!-- Css External -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css\style.css">
+    <!-- Tailwind CSS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
+    
+<div class="todo-container h-auto ">
+    <!-- header -->
+    <header>
+        <h1 class="text-3xl font-bold text-gray-300">Ais Todo App</h1>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <!-- Form Todo --> 
+        <section>
+            <input type="hidden" class="border rounded p-[5px] text-gray-300" id="todo-id">
+            <form id="todo-form">
+                <input type="text" class="border rounded p-[5px] text-gray-300" id="todo-inputs" placeholder="Enter yout todo..." required>
+                <input type="date" class="border rounded p-[5px] text-gray-300" id="todo-date" required>
+                <button type="button" onclick="addTodo()" class="bg-blue-900 rounded w-13 h-9  text-center-3xl">+</button>                                     
+            </form>
+        </section>
+    
+        <!-- Action Buttons -->
+        <section class="mt-[16px] flex gap-2" style="display: flex; justify-content: space-between;">
+            <button class="left bg-blue-900 rounded text-white p-[8px]">Filter</button>
+            <button class="bg-blue-700 rounded text-white p-[8px]" onclick="deleteAllTodo()">Delete All</button>
+        </section>
+
+        <section class="mt-[16px]">
+            <table class="todo-table" style="width:100%; border-collapse:collapse; margin-top:16px;">
+                <thead>
+                    <tr style="background:#23234a; color:#fff;">
+                        <th style="border:1px solid #6c6c8a; padding:8px;">Task</th>
+                        <th style="border:1px solid #6c6c8a; padding:8px;">Due Date</th>
+                        <th style="border:1px solid #6c6c8a; padding:8px;">Status</th>
+                        <th style="border:1px solid #6c6c8a; padding:8px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="todo-list-body">
+                        <tr>
+                            <td colspan="4" style="text-align:center; color:#aaa; padding:16px;">No task found</td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+</div>
+
+        <!-- List Todo -->
+        <section class="mt-[16px]">
+            <ul id="todo-list" class="mt-4">
+                <!-- Todo items will be appended here -->
+                <p class="text-center text-gray-500">No todos yet. Add one above!</p>
+            </ul>
+        </section>                       
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <p class="text-gray-300">&copy; 2025 Ais Todo App</p>
+    </footer>
 
     <!-- Javascript -->
-    <script src="script.js"></script>
+    <script src="js\script.js"></script>
 </body>
-
 </html>

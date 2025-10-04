@@ -1,0 +1,36 @@
+body {
+    border-color: rgb(117, 107, 107);
+    justify-items: center;
+    align-content: center;
+    height: 100vh;
+    background-color: rgba(1, 1, 32, 0.925)
+}
+
+section {
+    margin-top: 16px;
+    right: auto;
+
+}
+
+.todo-container {
+     max-width: 500px;
+     margin: 40px auto;
+     background: #23234a;
+     border: 2px solid #6c6c8a;
+     border-radius: 16px;
+     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+     padding: 32px 24px;
+     color: #fff;
+     justify-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+#todo-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
